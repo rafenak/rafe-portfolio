@@ -7,7 +7,7 @@ import { socials } from '../data/socials.js';
 import { ArrowUpRight, Download } from '../components/Icons.jsx';
 import { isPlaceholder } from '../lib/hooks.js';
 
-export default function Contact({ index = '08' }) {
+export default function Contact({ index = '03' }) {
   const emailIsSet = !isPlaceholder(profile.email);
 
   return (
@@ -15,7 +15,7 @@ export default function Contact({ index = '08' }) {
       <div className="container">
         <SectionHeading index={index} label="Contact" />
         <Reveal as="h2" id="contact-title" className="contact__title">
-          Have a hard engineering problem? <em>Let’s build something meaningful.</em>
+          Have a project in mind? <em>Let’s talk.</em>
         </Reveal>
 
         <div className="contact__grid">

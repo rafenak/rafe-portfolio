@@ -19,14 +19,15 @@ export default function Hero() {
           </p>
 
           <h1 id="hero-title" className="hero__title">
-            <span className="line"><span style={{ '--i': 1 }}>Engineering systems</span></span>
-            <span className="line"><span style={{ '--i': 2 }}>that make a <em>difference.</em></span></span>
+            <span className="line"><span style={{ '--i': 1 }}>Building reliable</span></span>
+            <span className="line"><span style={{ '--i': 2 }}>systems at <em>scale.</em></span></span>
           </h1>
 
           <p className="hero__lead hero__in" style={{ '--i': 3 }}>
-            I’m a Senior Software Engineer with 7+ years of experience designing scalable backend systems,
-            distributed data pipelines and AI-powered tooling — turning complex, costly systems into fast,
-            reliable and efficient ones.
+            I’m a Senior Software Engineer with 7+ years of experience building scalable backend systems and
+            developer tools. I’ve worked across location intelligence, fintech, and healthcare, solving complex
+            performance and reliability challenges. At HERE Technologies, I focus on making systems faster, more
+            efficient, and easier to maintain.
           </p>
 
           <div className="hero__ctas hero__in" style={{ '--i': 4 }}>
@@ -58,28 +59,9 @@ export default function Hero() {
       </div>
 
       <div className="container">
-        <dl className="hero__meta hero__in" style={{ '--i': 5 }}>
-          <div>
-            <dt>Discipline</dt>
-            <dd>{profile.discipline}</dd>
-          </div>
-          <div>
-            <dt>Experience</dt>
-            <dd>{profile.experience}</dd>
-          </div>
-          <div>
-            <dt>Location</dt>
-            <dd>{profile.location}</dd>
-          </div>
-          <div>
-            <dt>Domains</dt>
-            <dd>Fintech · Healthcare · Location</dd>
-          </div>
-        </dl>
-
         <ul className="hero__stats" aria-label="Highlights">
           {heroStats.map((s, i) => (
-            <li key={s.label} className="hero__in" style={{ '--i': 6 + i }}>
+            <li key={s.label} className="hero__in" style={{ '--i': 5 + i }}>
               <span className="hero__stat-value">{s.value}</span>
               <span className="hero__stat-label">{s.label}</span>
             </li>

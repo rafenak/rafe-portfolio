@@ -12,23 +12,25 @@ export default function ProjectCard({ project, index }) {
             View case study <ArrowUpRight />
           </span>
         </div>
-        <div className="project-card__meta">
-          <span>{String(index + 1).padStart(2, '0')}</span>
-          <span>{project.domain}</span>
-          <span>{project.company}</span>
+        <div className="project-card__content">
+          <div className="project-card__meta">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <span>{project.domain}</span>
+            <span>{project.company}</span>
+          </div>
+          <h3 className="project-card__title">
+            {project.title}
+            <span className="project-card__headline"> — {project.headline}</span>
+          </h3>
+          <p className="project-card__desc">{project.short}</p>
+          <p className="project-card__role">{project.role}</p>
+          <ul className="tag-list" aria-label="Technologies">
+            {project.tags.slice(0, 4).map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
         </div>
-        <h3 className="project-card__title">
-          {project.title}
-          <span className="project-card__headline"> — {project.headline}</span>
-        </h3>
-        <p className="project-card__desc">{project.short}</p>
-        <p className="project-card__role">{project.role}</p>
       </Link>
-      <ul className="tag-list" aria-label="Technologies">
-        {project.tags.slice(0, 4).map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
     </article>
   );
 }

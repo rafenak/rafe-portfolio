@@ -3,9 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { profile } from '../data/content.js';
 
 const navItems = [
-  { id: 'about', label: 'About' },
   { id: 'work', label: 'Work' },
-  { id: 'expertise', label: 'Expertise' },
   { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ];

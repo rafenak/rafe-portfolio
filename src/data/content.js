@@ -18,10 +18,9 @@ export const profile = {
 };
 
 export const heroStats = [
-  { value: '7+', label: 'Years in production engineering' },
-  { value: '98%', label: 'Infra cost cut on EGIS' },
-  { value: '35K+', label: 'Requests / second served' },
-  { value: '3', label: 'Domains — fintech, health, location' },
+  { value: '7+', label: 'Years of experience' },
+  { value: '98%', label: 'Lower infrastructure cost' },
+  { value: '35K+', label: 'Requests per second' },
 ];
 
 export const about = {
@@ -109,32 +108,22 @@ export const experience = [
     role: 'Senior Software Engineer — Product & Tools Engineering',
     period: 'Mar 2024 — Present',
     summary:
-      'Design and develop scalable backend services and internal engineering tools supporting HERE’s global location intelligence platform across multiple products.',
+      'Build backend services and internal tools for HERE’s global location platform.',
     contributions: [
-      'EGIS — re-architected legacy processing with multi-layer caching (AWS ElastiCache + in-memory) and upgraded to Java 21 virtual threads.',
-      'Nucleus — upgraded Apache Spark and Flink for AWS EMR compliance while improving processing performance.',
-      'Atlas — added advanced imagery support to a 20+ year old mapping tool for editing nodes, links, POIs and roundabouts.',
-      'Built an AI-powered RAG tool and an AWS cost optimization module driven by log patterns and usage metrics.',
+      'Improved performance and reduced infrastructure costs across backend and data platforms.',
+      'Built AI-powered tools for engineering knowledge and cloud-cost analysis.',
     ],
-    achievements: [
-      '$160K → $2K / month infra cost',
-      '35,000+ req/sec',
-      '70 GB → 8 GB RAM per pod',
-      '$4K → $1.2K / month EMR cost',
-    ],
+    achievements: ['70 GB → 8 GB RAM per pod'],
   },
   {
     company: 'Concerto Software and Systems',
     role: 'Software Engineer',
-    period: 'Sep 2019 — [End date]',
+    period: 'Sep 2019 — Mar 2024',
     summary:
-      'Developed applications and APIs in the financial fraud domain for HDFC Bank, SBI, Westpac Australia and Nymcard. Involved in designing fraud management infrastructure, portfolios and message layouts.',
+      'Built fraud-management products for banks and fintechs across India, Australia, and the UAE.',
     contributions: [
-      'Developed Bulk Fraud Card Marking and Event Risk Entry modules for HDFC Bank.',
-      'Built an API to provision users into the application from the bank’s common login portal.',
-      'Built a Java desktop application to send FASTag fraud messages to SBI customers.',
-      'Implemented the Fraud Management System on Azure Cloud for Nymcard.',
-      'Migrated data from the legacy Fraud Management system to the new platform.',
+      'Delivered fraud-management features and integrations for HDFC Bank and SBI.',
+      'Implemented an Azure fraud platform and data migration for Nymcard.',
     ],
     achievements: ['4 banks & fintechs', '3 countries', 'Azure cloud rollout'],
   },
@@ -143,10 +132,9 @@ export const experience = [
     role: 'Consultant — Development',
     period: 'Jul 2018 — Aug 2019',
     summary:
-      'Created, coded, tested and implemented HL7 solutions for AthenaHealth (US). Transformed and stored HL7 messages through an integration engine.',
+      'Developed healthcare integrations for AthenaHealth in the US.',
     contributions: [
-      'Built HL7 message transformation and storage flows on the integration engine.',
-      'Migrated data from one user space to another.',
+      'Built HL7 message-processing flows and migrated data between user spaces.',
     ],
     achievements: ['HL7 integration', 'US healthcare client'],
   },

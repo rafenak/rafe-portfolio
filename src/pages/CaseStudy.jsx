@@ -19,37 +19,6 @@ function CaseSection({ index, label, children }) {
   );
 }
 
-function List({ items, ordered = false }) {
-  const Tag = ordered ? 'ol' : 'ul';
-  return (
-    <Tag className={`cs-list${ordered ? ' cs-list--ordered' : ''}`}>
-      {items.map((item) => (
-        <li key={item}><Text>{item}</Text></li>
-      ))}
-    </Tag>
-  );
-}
-
-function Architecture({ layers, caption }) {
-  return (
-    <figure className="arch">
-      <ol className="arch__layers">
-        {layers.map((layer) => (
-          <li key={layer.label} className={`arch__layer${layer.accent ? ' is-accent' : ''}`}>
-            <span className="arch__label">{layer.label}</span>
-            <ul className="arch__nodes">
-              {layer.nodes.map((node) => (
-                <li key={node}><Text>{node}</Text></li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ol>
-      {caption && <figcaption>{caption}</figcaption>}
-    </figure>
-  );
-}
-
 export default function CaseStudy() {
   const { slug } = useParams();
   const project = getProject(slug);
@@ -64,8 +33,6 @@ export default function CaseStudy() {
 
   const index = projects.indexOf(project);
   const next = projects[(index + 1) % projects.length];
-  let n = 0;
-  const num = () => (n += 1);
 
   return (
     <article className="case-study">
@@ -108,50 +75,24 @@ export default function CaseStudy() {
           ))}
         </ul>
 
-        <CaseSection index={num()} label="Overview">
-          <p className="cs-lead"><Text>{project.overview}</Text></p>
+        <CaseSection index={1} label="The Challenge">
+          <p className="cs-lead">{project.challenge}</p>
         </CaseSection>
 
-        <CaseSection index={num()} label="The Problem">
-          <List items={project.problem} />
-        </CaseSection>
-
-        <CaseSection index={num()} label="Goals">
-          <List items={project.goals} ordered />
-        </CaseSection>
-
-        <CaseSection index={num()} label="My Role">
-          <List items={project.responsibilities} />
-        </CaseSection>
-
-        <CaseSection index={num()} label="Discovery">
-          {project.discovery.map((p) => (
-            <p key={p}><Text>{p}</Text></p>
-          ))}
-        </CaseSection>
-
-        <CaseSection index={num()} label="Architecture">
-          <Architecture {...project.architecture} />
-        </CaseSection>
-
-        <CaseSection index={num()} label="Key Decisions">
+        <CaseSection index={2} label="My Approach">
           <div className="decisions">
             {project.approach.map((a, i) => (
               <div className="decision" key={a.title}>
                 <span className="decision__index">{String.fromCharCode(65 + i)}</span>
                 <h3>{a.title}</h3>
-                <p><Text>{a.body}</Text></p>
+                <p>{a.body}</p>
               </div>
             ))}
           </div>
         </CaseSection>
 
-        <CaseSection index={num()} label="Outcome">
-          <p className="cs-lead"><Text>{project.outcome}</Text></p>
-        </CaseSection>
-
-        <CaseSection index={num()} label="Learnings">
-          <List items={project.learnings} />
+        <CaseSection index={3} label="Outcome">
+          <p className="cs-lead">{project.outcome}</p>
         </CaseSection>
       </div>
 

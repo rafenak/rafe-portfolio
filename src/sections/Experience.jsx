@@ -9,9 +9,9 @@ export default function Experience() {
       <div className="container">
         <Reveal>
           <SectionHeading
-            index="05"
+            index="02"
             label="Experience"
-            title={<span id="experience-title">Seven years, <em>three</em> industries.</span>}
+            title={<span id="experience-title">A track record across <em>industries.</em></span>}
           />
         </Reveal>
 
